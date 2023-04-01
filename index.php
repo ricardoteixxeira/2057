@@ -109,28 +109,8 @@
 
 	</script>
 
-<body>
-	<div class="container">
-		<h1>2057</h1>
-		<div class="countdown">
-			<div class="countdown-item">
-				<span class="countdown-item-value" id="days"></span>
-				<span class="countdown-item-label">Dias</span>
-			</div>
-			<div class="countdown-item">
-				<span class="countdown-item-value" id="hours"></span>
-				<span class="countdown-item-label">Horas</span>
-			</div>
-			<div class="countdown-item">
-				<span class="countdown-item-value" id="minutes"></span>
-				<span class="countdown-item-label">Minutos</span>
-			</div>
-			<div class="countdown-item">
-				<span class="countdown-item-value" id="seconds"></span>
-				<span class="countdown-item-label">Segundos</span>
-			</div>
-		</div>
-	</div>
+<h1>Contagem Regressiva para 2057</h1>
+<h1><span id="countdown"></span></h1>
 
 </body>
 
