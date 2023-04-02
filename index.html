@@ -1,135 +1,119 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>2057</title>
-	<style>
-		body {
-			font-family: Arial, sans-serif;
-			text-align: center;
-			background-color: #f2f2f2;
-		}
-
-		h1 {
-			font-size: 3em;
-			color: #333;
-			margin-top: 1em;
-		}
-
-		p {
-			font-size: 1.2em;
-			color: #666;
-			margin: 1em auto;
-			max-width: 80%;
-		}
-
-		button {
-			font-size: 1.2em;
-			background-color: #f00;
-			color: #fff;
-			padding: 0.5em 1em;
-			border: none;
-			border-radius: 0.3em;
-			cursor: pointer;
-		}
-
-		button:hover {
-			background-color: #d00;
-		}
-
-		.container {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			justify-content: center;
-			height: 100vh;
-		}
-
-		.countdown {
-			display: flex;
-			flex-wrap: wrap;
-			justify-content: center;
-			text-align: center;
-			font-size: 2rem;
-			color: #555;
-		}
-
-		.countdown-item {
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			margin: 1rem;
-			padding: 1rem;
-			background-color: #fff;
-			border-radius: 5px;
-			box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-		}
-
-		.countdown-item-value {
-			font-size: 4rem;
-			font-weight: bold;
-			color: #333;
-			margin-bottom: 0.5rem;
-		}
-
-		.countdown-item-label {
-			font-size: 1.5rem;
-			color: #777;
-		}
-
-	</style>
-</head>
-<body>
-
-<h1>Contagem Regressiva para 2057</h1>
-
-<script>
-	// Define a data-alvo
-	const targetDate = new Date('January 1, 2057 00:00:00');
-
-	// Atualiza a contagem regressiva a cada segundo
-	const interval = setInterval(() => {
-		// Obtem a data atual
-		const now = new Date();
-
-		// Calcula a diferença entre a data atual e a data-alvo
-		const difference = targetDate.getTime() - now.getTime();
-
-		// Calcula os anos, meses, dias, horas e segundos restantes
-		let years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
-		let months = Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
-		let days = Math.floor((difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
-		let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-		let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-		let seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-		// Corrige os valores negativos de meses e dias
-		if (months < 0) {
-			years--;
-			months += 12;
-		}
-		if (days < 0) {
-			months--;
-			days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
-		}
-
-		// Exibe a contagem regressiva na página da web
-		document.getElementById('countdown').innerHTML = `${years} anos, ${months} meses, ${days} dias, ${hours} horas e ${seconds} segundos`;
-
-		// Para a contagem regressiva quando a data-alvo é alcançada
-		if (difference < 0) {
-			clearInterval(interval);
-			document.getElementById('countdown').innerHTML = 'Bem-vindo ao Planeta de Regeneração';
-		}
-	}, 1000);
-
-</script>
-
-<p>"Emmanuel afirma que a Terra será um mundo regenerado por volta de 2057." Chico Xavier. Plantão de Respostas, volume II</p>
-
-<h1><span id="countdown"></span></h1>
-
-<a href="https://www.eub.org.br/2057" target="_blank"><button>Saiba Mais</button></a>
-
-</body>
+   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>2057</title>
+      <style>
+         body {
+         font-family: Arial, sans-serif;
+         text-align: center;
+         background-color: #f2f2f2;
+         }
+         h1 {
+         font-size: 3em;
+         color: #333;
+         margin-top: 1em;
+         }
+         p {
+         font-size: 1.2em;
+         color: #666;
+         margin: 1em auto;
+         max-width: 80%;
+         }
+         button {
+         font-size: 1.2em;
+         background-color: #f00;
+         color: #fff;
+         padding: 0.5em 1em;
+         border: none;
+         border-radius: 0.3em;
+         cursor: pointer;
+         }
+         button:hover {
+         background-color: #d00;
+         }
+         .container {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         justify-content: center;
+         height: 100vh;
+         }
+         .countdown {
+         display: flex;
+         flex-wrap: wrap;
+         justify-content: center;
+         text-align: center;
+         font-size: 2rem;
+         color: #555;
+         }
+         .countdown-item {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         margin: 1rem;
+         padding: 1rem;
+         background-color: #fff;
+         border-radius: 5px;
+         box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+         }
+         .countdown-item-value {
+         font-size: 4rem;
+         font-weight: bold;
+         color: #333;
+         margin-bottom: 0.5rem;
+         }
+         .countdown-item-label {
+         font-size: 1.5rem;
+         color: #777;
+         }
+      </style>
+   </head>
+   <body>
+      <h1>Contagem Regressiva para 2057</h1>
+      <script>
+         // Define a data-alvo
+         const targetDate = new Date('January 1, 2057 00:00:00');
+         
+         // Atualiza a contagem regressiva a cada segundo
+         const interval = setInterval(() => {
+         	// Obtem a data atual
+         	const now = new Date();
+         
+         	// Calcula a diferença entre a data atual e a data-alvo
+         	const difference = targetDate.getTime() - now.getTime();
+         
+         	// Calcula os anos, meses, dias, horas e segundos restantes
+         	let years = Math.floor(difference / (1000 * 60 * 60 * 24 * 365));
+         	let months = Math.floor((difference % (1000 * 60 * 60 * 24 * 365)) / (1000 * 60 * 60 * 24 * 30));
+         	let days = Math.floor((difference % (1000 * 60 * 60 * 24 * 30)) / (1000 * 60 * 60 * 24));
+         	let hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+         	let minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+         	let seconds = Math.floor((difference % (1000 * 60)) / 1000);
+         
+         	// Corrige os valores negativos de meses e dias
+         	if (months < 0) {
+         		years--;
+         		months += 12;
+         	}
+         	if (days < 0) {
+         		months--;
+         		days += new Date(now.getFullYear(), now.getMonth(), 0).getDate();
+         	}
+         
+         	// Exibe a contagem regressiva na página da web
+         	document.getElementById('countdown').innerHTML = `${years} anos, ${months} meses, ${days} dias, ${hours} horas e ${seconds} segundos`;
+         
+         	// Para a contagem regressiva quando a data-alvo é alcançada
+         	if (difference < 0) {
+         		clearInterval(interval);
+         		document.getElementById('countdown').innerHTML = 'Bem-vindo ao Planeta de Regeneração';
+         	}
+         }, 1000);
+         
+      </script>
+      <p>"Emmanuel afirma que a Terra será um mundo regenerado por volta de 2057." Chico Xavier. Plantão de Respostas, volume II</p>
+      <h1><span id="countdown"></span></h1>
+      <a href="https://www.eub.org.br/2057" target="_blank"><button>Saiba Mais</button></a>
+   </body>
 </html>
